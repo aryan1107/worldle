@@ -126,7 +126,7 @@ export default function App() {
             </button>
           </header>
           <Game settingsData={settingsData} updateSettings={updateSettings} />
-          <footer className="flex justify-center items-center mt-8 mb-4">
+          {/* <footer className="flex justify-center items-center mt-8 mb-4">
             <Twemoji
               text="❤️"
               className="flex items-center justify-center mr-1"
@@ -156,7 +156,7 @@ export default function App() {
                 </div>
               </a>
             )}
-          </footer>
+          </footer> */}
         </div>
       </div>
     </>

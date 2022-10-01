@@ -88,7 +88,7 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3 font-bold">
         A new <Worldle /> will be available every day!
       </div>
-      <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
+      {/* <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
         <div className="font-bold">Any question or suggestion?</div>
         <div>
           Check the{" "}
@@ -102,33 +102,34 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
           </a>
           !
         </div>
-      </div>
+      </div> */}
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
         <Worldle /> has been <span className="font-bold">heavily</span> inspired
         by{" "}
-        <a
+        {/* <a
           className="underline"
           href="https://www.powerlanguage.co.uk/wordle/"
           target="_blank"
           rel="noopener noreferrer"
         >
           Wordle
-        </a>{" "}
-        created by{" "}
-        <a
+        </a>{" "} */}
+        Wordle created by Josh Wardle{" "}
+        {/* <a
           className="underline"
           href="https://twitter.com/powerlanguish"
           target="_blank"
           rel="noopener noreferrer"
         >
           Josh Wardle (@powerlanguish)
-        </a>
+        </a> */}
         .
       </div>
       <div className="space-y-3 text-justify pb-3">
         <div>
-          Made by{" "}
-          <a
+          This version is based on teuteuf website ❤️, I hate ads just added one
+          banner{" "}
+          {/* <a
             className="underline"
             href="https://twitter.com/teuteuf"
             target="_blank"
@@ -159,7 +160,7 @@ export function Infos({ isOpen, close, settingsData }: InfosProps) {
               text="Buy me a coffee! ☕"
               options={{ className: "inline-block" }}
             />
-          </a>
+          </a> */}
         </div>
       </div>
     </Panel>
