@@ -45,7 +45,7 @@ export function getDirectionEmoji(guess: Guess) {
 
 export function computeProximityPercent(distance: number): number {
   const proximity = Math.max(MAX_DISTANCE_ON_EARTH - distance, 0);
-  return Math.round((proximity / MAX_DISTANCE_ON_EARTH) * 100);
+  return Math.floor((proximity / MAX_DISTANCE_ON_EARTH) * 100);
 }
 
 export function generateSquareCharacters(
@@ -73,6 +73,6 @@ export function formatDistance(
   const distanceInKm = distanceInMeters / 1000;
 
   return distanceUnit === "km"
-    ? `${Math.round(distanceInKm)}km`
-    : `${Math.round(distanceInKm * 0.621371)}mi`;
+    ? `${Math.round(distanceInKm).toLocaleString()}km`
+    : `${Math.round(distanceInKm * 0.621371).toLocaleString()}mi`;
 }
