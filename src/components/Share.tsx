@@ -60,7 +60,11 @@ export function Share({
       })
       .join("\n");
 
-    return [title, guessString, "https://worldle.teuteuf.fr"].join("\n");
+    return [
+      title,
+      guessString,
+      "https://apps.apple.com/in/app/worldle-maps-geography/id1610830002?platform=iphone",
+    ].join("\n");
   }, [dayString, guesses, hideImageMode, rotationMode, theme]);
 
   return (
@@ -71,7 +75,7 @@ export function Share({
         format: "text/plain",
       }}
     >
-      <button className="rounded font-bold border-2 p-1 uppercase bg-green-600 hover:bg-green-500 active:bg-green-700 text-white w-full">
+      <button className="border-2 px-4 uppercase bg-green-600 hover:bg-green-500 active:bg-green-700 text-white w-full">
         {t("share")}
       </button>
     </CopyToClipboard>

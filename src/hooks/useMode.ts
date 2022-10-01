@@ -10,11 +10,9 @@ export function useMode(
   dayString: string,
   defaultValue: boolean
 ): [boolean, (modeValue: boolean) => void] {
-  const [modeValue, setModeValue] = useState<boolean>(defaultValue);
-
-  useEffect(() => {
-    setModeValue(loadAllModeValues(modeName)[dayString] ?? defaultValue);
-  }, [dayString, defaultValue, modeName]);
+  const [modeValue, setModeValue] = useState<boolean>(
+    loadAllModeValues(modeName)[dayString] ?? defaultValue
+  );
 
   useEffect(() => {
     const allModeValues = loadAllModeValues(modeName);

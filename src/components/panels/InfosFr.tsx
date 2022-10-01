@@ -4,7 +4,6 @@ import React from "react";
 import { Worldle } from "../Worldle";
 import { formatDistance } from "../../domain/geography";
 import { SettingsData } from "../../hooks/useSettings";
-import { Twemoji } from "@teuteuf/react-emoji-render";
 
 interface InfosProps {
   isOpen: boolean;
@@ -61,7 +60,7 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
             settingsData={settingsData}
           />
           <div className="my-2">
-            Votre second essai{" "}
+            Votre seconde essai{" "}
             <span className="uppercase font-bold">Finlande</span> est plus
             proche ! La bonne réponse est à{" "}
             {formatDistance(3_206_000, settingsData.distanceUnit)}, au Sud-Est
@@ -82,8 +81,7 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
           />
           <div className="my-2">
             Prochain essai, <span className="uppercase font-bold">Liban</span>,
-            c&apos;est le pays à deviner ! Bien joué !{" "}
-            <Twemoji text="🎉" options={{ className: "inline-block" }} />
+            c&apos;est le pays à deviner ! Bien joué ! 🎉
           </div>
         </div>
       </div>
@@ -91,18 +89,16 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
         Un nouveau <Worldle /> sera disponible chaque jour !
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
-        <div className="font-bold">Une question ou suggestion ?</div>
+        <div className="font-bold">A propos de la distance</div>
         <div>
-          Rendez-vous sur la{" "}
-          <a
-            className="underline"
-            href="https://worldle.notion.site/Worldle-4005ca16fc9341e7be8adcfd30628146"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            FAQ Worldle
-          </a>{" "}
-          !
+          Les distances affichées correspondent aux distances entre le centre du
+          pays choisi et de la cible.
+        </div>
+        <div>
+          Par exemple, la distance calculée entre les Etats-Unis et le Canada
+          est d&apos;environs{" "}
+          {formatDistance(2_260_000, settingsData.distanceUnit)} même si les
+          deux pays ont une frontière commune.
         </div>
       </div>
       <div className="space-y-3 text-justify border-b-2 border-gray-200 pb-3 mb-3">
@@ -129,38 +125,25 @@ export function InfosFr({ isOpen, close, settingsData }: InfosProps) {
       <div className="space-y-3 text-justify pb-3">
         <div>
           Fait par{" "}
-          <a
+          {/* <a
             className="underline"
-            href="https://twitter.com/teuteuf"
+            href="https://twitter.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
             @teuteuf
-          </a>{" "}
-          - (
-          <a
-            className="underline"
-            href="https://github.com/teuteuf/worldle/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            code source
-          </a>
-          )
+          </a> */}
         </div>
         <div>
           Vous voulez me soutenir ?{" "}
-          <a
+          {/* <a
             className="underline"
-            href="https://www.ko-fi.com/teuteuf"
+            href="https://www.buymeacoffee.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Twemoji
-              text="Offrez moi un café ! ☕"
-              options={{ className: "inline-block" }}
-            />
-          </a>
+            Offrez moi un café ! ☕
+          </a> */}
         </div>
       </div>
     </Panel>
